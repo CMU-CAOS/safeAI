@@ -1,0 +1,13 @@
+!index.html
+!img
+!img/
+!css/
+!js/
+
+*.html
+!index.html
+!404.html
+
+
+*.xml
+docker-compose.yml
