@@ -32,6 +32,6 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://cmu-caos.github.io//safeAI",
+  "start_url": "http://localhost:4000/safeAI",
   "display": "standalone"
 }
