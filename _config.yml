@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: ""
+url: "https://cmu-caos.github.io/"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -12,7 +12,7 @@ url: ""
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-baseurl: ""
+baseurl: "/safeAI"
 
 # Google tracking id
 
@@ -166,21 +166,6 @@ syntax-highlight: True
 email: ".@gmail.com"
 phone: "Ph: Available on request"
 
-################
-# Author Blurb #
-################
-
-# The author blurb goes underneath blog posts.
-# Works best when your author blurb image has a transparent background, or matches your site background color.
-
-# if the author_blurb is not set, then this feature is skipped
-author_blurb: "."
-author_blurb_image: "/img/author.jpg"
-
-##################
-# Social Buttons #
-##################
-
 ############
 # 404 page #
 ############
@@ -195,6 +180,7 @@ err-404-img: "/img/geek_old.png"
 
 pages_list:
   About: 'about'
+  Organizers: 'organizers'
   Program: 'program'
   Talks: 'talks'
   Tutorial: 'tutorial'
@@ -202,7 +188,7 @@ pages_list:
 
 # Exclusion list from the generated _site
 
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
+exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts", "Gemfile", "Gemfile.lock"]
 
 # Pagination path
 
