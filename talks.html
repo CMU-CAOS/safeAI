@@ -5,16 +5,18 @@ title: About
 ---
 ## Talks
 
+<p style="text-align:center">
 Talks featuring speakers across acadmeia and industry on the latest exciting developments in encrypted computing.
+</p>
+
 
 ---
 
-#### Time: TBD
+#### <a  name="JungHo"></a> Time: TBD
 ### GPU-driven FHE: Real-Time Private AI Inference Competing Custom ASIC
-#### Speaker: [Jung Ho Ahn (Seoul National University)](https://geniajh.github.io) 
 #### Abstract
 A significant challenge in accelerating fully homomorphic encryption (FHE) for practical applications is achieving high performance. DARPA, through the DPRIVE program in 2020, set a demanding performance target: running inference on a 7-layer convolutional neural network (CNN) against the CIFAR-10 dataset within 25ms. Using two H100 GPUs, we have achieved a remarkable 24.8ms latency with 87% accuracy without fabricating ASIC. This presentation will outline the series of techniques we have developed and leveraged since 2019 to accelerate CKKS, a widely adopted FHE scheme for machine learning. These techniques include low-degree polynomial approximation (AESPA), an agile CKKS GPU library (Cheddar), and advanced channel packing strategies inspired by HyPHEN and NeuJeans, all optimized for powerful GPUs.
-#### Speaker Bio
+#### Speaker: [Jung Ho Ahn (Seoul National University)](https://geniajh.github.io) 
 ![image](img/gajh.jpg)
 \
 Jung Ho Ahn is a professor at Seoul National University. Professor Ahn received his Ph.D. in electrical engineering from Stanford University (2007), was a senior research scientist at HP labs before joining Seoul National University, and took a sabbatical at Google (2016). His research interests include bridging the gap between the performance/efficiency demand of emerging applications (including homomorphic encryption) and the performance/efficiency potential of modern and future massively parallel systems, more specifically on memory subsystems. Professor Ahn is the hall of fame member of HPCA, ISCA, and MICRO.
@@ -22,28 +24,35 @@ Jung Ho Ahn is a professor at Seoul National University. Professor Ahn received 
 
 ---
 
-#### Time: TBD
+#### <a name="Brandon"></a> Time: TBD
 ### Fast and Accessible FHE-Secured Deep Learning with the Orion Compilation Framework
-#### Speaker: [Brandon Reagen (New York University)](https://engineering.nyu.edu/faculty/brandon-reagen)
 #### Abstract
-#### Speaker Bio
-<!-- ![image](img/brandon.png) -->
-<img style="width:25%;height:25%;" src="img/brandon.png">
+In this talk I'll present an overview of my lab's work on private neural inference over the last 5 years. This will include a brief overview of our neural network optimizations and various hardware accelerators. The core focus of the talk will be our new FHE neural network compiler named Orion, which will appear in the main ASPLOS conference. Orion automates and optimizes FHE, providing SOTA performance with a PyTorch programming model, making FHE more accessible than ever before! I'll also explain how we pack vectors, leverage state-of-the-art FHE techniques, optimize level management and bootstrap placement, handle re-scaling, fit polynomial approximations, and deal with large data structures (e.g., weights and keys). To conclude, we will present a demo of our code and show how it can be used.
+#### Speaker: [Brandon Reagen (New York University)](https://engineering.nyu.edu/faculty/brandon-reagen)
+![image](img/brandon.png)
 \
 Dr. Reagen is a professor of Electrical and Computer Engineering at New York University with a focus on computer architecture. He leads a group of 7 PhD students whose current focus is to make cryptographic computing practical through algorithmic, compiler, and hardware optimizations for homomorphic encryption, zero-knowledge proofs, and secure multi-party computation. Prior to cryptographic computing, he made significant contributions to accelerator design and hardware for machine learning. The work has been recognized with multiple best paper nominations and Top Pick/honorable mention awards. He has further implemented many ideas, participating in multiple chip tape outs. He is actively a performer on the DARPA DPRIVE, PROWESS, and COOP programs, was recognized as a DARPA Riser in 2022, and won his NSF CAREER award in 2024. He has authored over 50 papers and holds one patent. He holds a Ph.D. in Computer Science from Harvard, B.S. degrees in Computer Engineering and Applied Mathematics from UMass, Amherst.
 
 ---
 
-### Title 
+#### <a name="Mingyu"></a> Time: TBD
+### Towards Unified Architectural Support for Privacy-Preserving Computing
+#### Abstract
+Privacy-preserving computing involves several categories of cryptographic protocols such as fully homomorphic encryption (FHE), multi-party computation (MPC), and zero-knowledge proof (ZKP). In this talk I will start with our recent work that designed specialized accelerators for ZKP as well as functional units for ZKP and FHE. These efforts lead us to exploit the opportunities to design unified architectures that efficiently support not only largely varying parameters in each protocol, but also multiple different protocols. Considering the still rapid development of crypto protocols, such flexibility in hardware would be highly desired.
 #### Speaker: [Mingyu Gao (Tsinghua University)](https://people.iiis.tsinghua.edu.cn/~gaomy/)
-#### Time: TBD
-Abstract: TBD
+![image](img/mingyu.jpg)
+\
+Mingyu Gao is an associate professor of computer science in the Institute for Interdisciplinary Information Sciences (IIIS) at Tsinghua University. His research interests lie in the fields of computer architecture and systems, including efficient memory architectures, scalable data processing, and hardware system security. He has published in top-tier conferences including ISCA, MICRO, ASPLOS, HPCA, OSDI, SIGMOD, and VLDB. Mingyu received his PhD in Electrical Engineering at Stanford University in 2018.
 
 ---
 
-### Title
+#### <a name="Asra"></a> Time: TBD
+### HEIR: A Universal Compiler for Fully Homomorphic Encryption
+#### Abstract
+The HEIR project is a compiler toolchain for fully homomorphic encryption (FHE) that aims to incorporate all major techniques and algorithmic optimizations in FHE, accelerate FHE research, and lower the barrier to production FHE deployments. As a universal compiler, it aims to support any FHE scheme along with a set of extensible optimizations and generate code for any FHE hardware accelerator. With that goal, it can act as a common benchmarking platform for new research ideas and hardware accelerators. In this talk, we'll demonstrate how to use HEIR's python frontend to generate code for a variety of different platforms. We'll also highlight some of the FHE techniques implemented in HEIR, such as data-oblivious program transformations, data layout optimization, relinearization placement, vectorization strategies, and more.
 #### Speaker: [Asra Ali (Google)](https://x.com/asraentr0py)
-#### Time: TBD
-Abstract: TBD
+![image](img/asra.jpg)
+\
+Asra Ali is a software engineer at Google currently working on compilers for fully homomorphic encryption. Her track record includes developing and maintaining many open source projects around privacy and security, including Google's Ring Learning with Errors implementation, Sigstore's transparency log Rekor, and The Update Framework's Go module. She's also worked on real world privacy preserving applications using FHE, resulting in one patent. Her background is in abstract math, and published research in number theory.
 
 ---
