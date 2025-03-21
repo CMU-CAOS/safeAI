@@ -238,7 +238,7 @@ The workshop will cover a broad range of topics on systems and architectures for
           
 <!-- About Start -->
 
-<section id="about" class="container content-section text-center">
+<section id="about" class="container content-section text-center program-table">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <h2 id="program">Program</h2>
@@ -254,40 +254,48 @@ The workshop will cover a broad range of topics on systems and architectures for
   </thead>
   <tbody>
     <tr>
-      <td>8:30am</td>
+      <td>8:30am - 9:00am</td>
       <td>Coffee</td>
     </tr>
     <tr>
-      <td>9:00am</td>
-      <td>Talks</td>
+      <td>9:00am - 9:45am</td>
+      <td>Invited Talk 1 <br /><a class="page-scroll" href="#JungHo"> Jung Ho Ahn: GPU-driven FHE: Real-Time Private AI Inference Competing Custom ASIC </a></td>
     </tr>
     <tr>
-      <td>10:30am</td>
+      <td>9:45am - 10:30am</td>
+      <td>Invited Talk 2: <br /><a class="page-scroll" href="#Brandon">Brandon Reagen: Fast and Accessible FHE-Secured Deep Learning with the Orion Compilation Framework</a></td>
+    </tr>
+    <tr>
+      <td>10:30am - 11:00am</td>
       <td>Break</td>
     </tr>
     <tr>
-      <td>11:00am</td>
-      <td>Talks</td>
+      <td>11:00am - 11:45am</td>
+      <td>Invited Talk 3: <br /><a href="#Mingyu">Mingy Gao: Towards Unified Architectural Support for Privacy-Preserving Computing</a></td>
     </tr>
     <tr>
-      <td>12:30pm</td>
+      <td>11:45am - 12:30pm</td>
+      <td>Invited Talk 4: <br /><a href="#Asra">Asra Ali: Fast and Accessible FHE-Secured Deep Learning with the Orion Compilation Framework</a></td>
+    </tr>
+    <tr>
+      <td>12:30pm - 2:00pm</td>
       <td>Lunch</td>
     </tr>
     <tr>
-      <td>2:00pm</td>
-      <td>Tutorial</td>
+      <td>2:00pm - 3:30pm</td>
+      <td><a href="#Tutorial1">Cinnamon Tutorial Part 1</a></td>
     </tr>
     <tr>
-      <td>3:30pm</td>
+      <td>3:30pm - 4:00pm</td>
       <td>Break</td>
     </tr>
     <tr>
-      <td>4:00pm</td>
-      <td>Tutorial</td>
+      <td>4:00pm - 5:30pm</td>
+      <td><a href="#Tutorial2">Cinnamon Tutorial Part 2</a></td>
     </tr>
     <tr>
       <td>5:30pm</td>
-      <td>End</td>
+      <td>Closing Remarks</td>
     </tr>
   </tbody>
 </table>
@@ -317,7 +325,7 @@ Talks featuring speakers across acadmeia and industry on the latest exciting dev
 
 <hr />
 
-<h4 id="time-tbd">Time: TBD</h4>
+<h4 id="-time-tbd"><a name="JungHo"></a> Time: TBD</h4>
 <h3 id="gpu-driven-fhe-real-time-private-ai-inference-competing-custom-asic">GPU-driven FHE: Real-Time Private AI Inference Competing Custom ASIC</h3>
 <h4 id="abstract">Abstract</h4>
 <p>A significant challenge in accelerating fully homomorphic encryption (FHE) for practical applications is achieving high performance. DARPA, through the DPRIVE program in 2020, set a demanding performance target: running inference on a 7-layer convolutional neural network (CNN) against the CIFAR-10 dataset within 25ms. Using two H100 GPUs, we have achieved a remarkable 24.8ms latency with 87% accuracy without fabricating ASIC. This presentation will outline the series of techniques we have developed and leveraged since 2019 to accelerate CKKS, a widely adopted FHE scheme for machine learning. These techniques include low-degree polynomial approximation (AESPA), an agile CKKS GPU library (Cheddar), and advanced channel packing strategies inspired by HyPHEN and NeuJeans, all optimized for powerful GPUs.</p>
@@ -328,7 +336,7 @@ Jung Ho Ahn is a professor at Seoul National University. Professor Ahn received 
 
 <hr />
 
-<h4 id="time-tbd-1">Time: TBD</h4>
+<h4 id="-time-tbd-1"><a name="Brandon"></a> Time: TBD</h4>
 <h3 id="fast-and-accessible-fhe-secured-deep-learning-with-the-orion-compilation-framework">Fast and Accessible FHE-Secured Deep Learning with the Orion Compilation Framework</h3>
 <h4 id="abstract-1">Abstract</h4>
 <p>In this talk I’ll present an overview of my lab’s work on private neural inference over the last 5 years. This will include a brief overview of our neural network optimizations and various hardware accelerators. The core focus of the talk will be our new FHE neural network compiler named Orion, which will appear in the main ASPLOS conference. Orion automates and optimizes FHE, providing SOTA performance with a PyTorch programming model, making FHE more accessible than ever before! I’ll also explain how we pack vectors, leverage state-of-the-art FHE techniques, optimize level management and bootstrap placement, handle re-scaling, fit polynomial approximations, and deal with large data structures (e.g., weights and keys). To conclude, we will present a demo of our code and show how it can be used.</p>
@@ -339,7 +347,7 @@ Dr. Reagen is a professor of Electrical and Computer Engineering at New York Uni
 
 <hr />
 
-<h4 id="time-tbd-2">Time: TBD</h4>
+<h4 id="-time-tbd-2"><a name="Mingyu"></a> Time: TBD</h4>
 <h3 id="towards-unified-architectural-support-for-privacy-preserving-computing">Towards Unified Architectural Support for Privacy-Preserving Computing</h3>
 <h4 id="abstract-2">Abstract</h4>
 <p>Privacy-preserving computing involves several categories of cryptographic protocols such as fully homomorphic encryption (FHE), multi-party computation (MPC), and zero-knowledge proof (ZKP). In this talk I will start with our recent work that designed specialized accelerators for ZKP as well as functional units for ZKP and FHE. These efforts lead us to exploit the opportunities to design unified architectures that efficiently support not only largely varying parameters in each protocol, but also multiple different protocols. Considering the still rapid development of crypto protocols, such flexibility in hardware would be highly desired.</p>
@@ -350,7 +358,7 @@ Mingyu Gao is an associate professor of computer science in the Institute for In
 
 <hr />
 
-<h4 id="time-tbd-3">Time: TBD</h4>
+<h4 id="-time-tbd-3"><a name="Asra"></a> Time: TBD</h4>
 <h3 id="heir-a-universal-compiler-for-fully-homomorphic-encryption">HEIR: A Universal Compiler for Fully Homomorphic Encryption</h3>
 <h4 id="abstract-3">Abstract</h4>
 <p>The HEIR project is a compiler toolchain for fully homomorphic encryption (FHE) that aims to incorporate all major techniques and algorithmic optimizations in FHE, accelerate FHE research, and lower the barrier to production FHE deployments. As a universal compiler, it aims to support any FHE scheme along with a set of extensible optimizations and generate code for any FHE hardware accelerator. With that goal, it can act as a common benchmarking platform for new research ideas and hardware accelerators. In this talk, we’ll demonstrate how to use HEIR’s python frontend to generate code for a variety of different platforms. We’ll also highlight some of the FHE techniques implemented in HEIR, such as data-oblivious program transformations, data layout optimization, relinearization placement, vectorization strategies, and more.</p>
