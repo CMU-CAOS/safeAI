@@ -3,12 +3,26 @@ layout: null
 section-type: about
 title: Tutorial
 ---
+<a  name="Tutorial1"></a>
+<a  name="Tutorial2"></a>
 ## Tutorial
 
-We will be hosting a tutorial on the state-of-the-art [Cinnamon]() framework for scale out encrypted AI. Participants are requested to bring laptops with access to linux and docker. We will provide the elements required by the tutorial using a docker container. 
-### Part 1 (2:00pm-3:30pm)
-Part 1 of the tutorial will cover writing simple programs in the Cinnamon DSL and running them.
-### Part 2 (4:00pm-5:30pm)
-Part 2 of the tutorial will explore optimizations and parallelization using the Cinnamon compiler, the Cinnamon simulation infrastructure and the Cinnamon RTL.
+<image src="img/cinnamon.jpg" style="border:none"></image>
+
+We will be hosting a two part tutorial on the state-of-the-art [Cinnamon](https://sidjay10.github.io/resources/papers/2025_Cinnamon.pdf) framework for scale out encrypted AI. This tutorial will be highly beneficial to anyone who wants to learn more about using FHE for encrypted AI.
+We request participants to bring their laptops for the tutorial. All material for the tutorial will be provided in the form of a git repositiory and a docker container. Please ensure that you have git and docker installed on your system. More instructions can be found here: [Docker Desktop](https://docs.docker.com/desktop/) and [git](https://git-scm.com/downloads).
+We recommend participants use [Visual Studio Code](https://code.visualstudio.com/download) for this tutorial. However, if this is not possible, it is also possible to run the tutorial locally through a jupyter server.
+
+### System Requirements
+- **OS**: Linux, MacOS or WSL on Windows
+- **Software Requirements**: [Docker](https://docs.docker.com/desktop/), [git](https://git-scm.com/downloads)
+- **Highly Recommended**: [Visual Studio Code](https://code.visualstudio.com/download)
+
+#### 2:00pm-3:30pm
+### Part 1
+In Part 1 of the tutorial, we will introduce the Cinnamon DSL, Cinnamon compiler and the Cinnamon emulator. We will cover the basics of writing, compiling and executing simple FHE applications using the Cinnamon framework. We will also cover an example of writing and running an encrypted logistic regression inference using the Cinnamon framework.
+#### 4:00pm-5:30pm
+### Part 2
+In Part 2 of the tutorial, we will explore Cinnamon's newly developed optimizations, parallelism and scale out techniques for encrypted AI using the Cinnamon compiler and the Cinnamon accelerator simulator. We will explore these using an encrypted MNIST inference as an example. Finally, we will present a brief overview of the RTL of the Cinnamon accelerator.
 
 
