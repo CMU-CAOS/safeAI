@@ -15,14 +15,18 @@
 <!--    <div class="left-bg"></div>
     <div class="right-bg"></div> -->
 
-    {% for p in site.pages_list %}
-      {% for page in site.pages %}
-        {% if p[1] == page.section-type %}
-          {% include {{ page.path }} %}
-        {% endif %}
-      {% endfor %}
+    <!-- Site Pages -->
+    {% assign year = page.year %}
+    {% for p in page.pages_list %}
+      {% if p[1] == "submit" %}
+       <!-- Submit -->
+      {% else %}
+        {% assign target_url = "/" | append: year | append: "/" | append: p[1] | append: ".html" %}
+        {% assign page = site.pages | where: "url", target_url | first %}
+        {% include {{ page.path }} %}
+      {% endif %}
     {% endfor %}
-
+  
 
     {% include js.html %}
 

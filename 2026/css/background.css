@@ -1,0 +1,71 @@
+---
+---
+/* .intro-{{page.year}} { */
+/* .image-container{
+    height: 100vh; 
+    width: 100%;
+} */
+
+/* .image-container::before {
+    content: "";
+    background-color: $header-background-color;
+    {% if page.background-img %}
+    background: url({{ site.baseurl }}/{{ page.year }}/{{ page.background-img }}) no-repeat bottom center scroll;
+    {% endif %}
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    filter: brightness(50%);
+    z-index: -1;
+} */
+
+.image-container {
+    /* 1. Setup container size and relative positioning */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Prevent text from inheriting the filter if it was applied here */
+    overflow: hidden;
+  }
+  
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* 2. Set the image */
+    background-color: $header-background-color;
+    {% if page.background-img %}
+    background: url({{ site.baseurl }}/{{ page.year }}/{{ page.background-img }}) no-repeat bottom center scroll;
+    {% endif %}
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+    /* 3. Apply 50% brightness filter */
+    filter: brightness(50%) blur(1px);
+    
+    /* Ensure background sits behind text */
+    z-index: 1;
+  }
+  
+  .image-text {
+    /* 4. Ensure text sits on top */
+    position: relative;
+    z-index: 2;
+    color: white;
+    /* font-family: sans-serif; */
+    
+    /* Optional: Enhance clarity */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    padding: 20px;
+  }

@@ -6,3 +6,13 @@ _config.dev.yml
 .jekyll-cache
 artifacts
 .vscode
+
+.DS_Store
+*/.DS_Store
+*/.DS_Store
+*/.DS_Store
+*/**/.DS_Store
+
+.sass-cache
+
+Gemfile.lock

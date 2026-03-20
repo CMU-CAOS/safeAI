@@ -36,6 +36,36 @@ h6 {
     letter-spacing: 1px;
 }
 
+h1 {
+    display: table;       /* Shrinks the box to fit the text length */
+    position: relative;
+    padding: 20px 20px;      /* Space for the lines */
+    margin: 20px auto;    /* Centers the heading on the page */
+}
+  
+h1::after {
+    content: '';          /* Required for pseudo-elements */
+    position: absolute;   /* Positions the line precisely */
+    display: block;       /* Makes it a block so width can be set */
+    bottom: 0;            /* Aligns to the bottom of the heading element */
+    left: 50%;              /* Starts from the left edge */
+    transform: translateX(-50%);
+    width: 75px;          /* Sets a fixed length for the line */
+    border-bottom: 5px solid $secondary-color; /* Styles the line */
+}
+
+// h1::before{
+//     content: '';          /* Required for pseudo-elements */
+//     position: absolute;   /* Positions the line precisely */
+//     display: block;       /* Makes it a block so width can be set */
+//     top: 0;            /* Aligns to the bottom of the heading element */
+//     left: 50%;              /* Starts from the left edge */
+//     transform: translateX(-50%);
+//     width: 100%;          /* Sets a fixed length for the line */
+//     border-bottom: 5px solid $secondary-color; /* Styles the line */
+// }
+
+
 /* Added in { Personal } */
 h4 {
     a.category {
@@ -77,12 +107,15 @@ a {
         text-decoration: none;
         color: darken($secondary-color,20%);
     }
+    word-break: break-all;
+    display: inline-block;
+    max-width: 100%;
 }
 
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba($font-color, 0.3);
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: $navbar-sm-background-color;
 
@@ -101,6 +134,7 @@ a {
     }
     .navbar-brand {
         font-weight: 700;
+        font-size: 32px;
         &:focus {
             outline: none;
         }
@@ -121,24 +155,27 @@ a {
                 &:hover {
                     /* color: rgba($font-color, 0.8); */
                     outline: none;
-                    background-color: rgba($font-color, 0.3);
+                    background-color: rgba($font-color, 0.5);
                 }
                 &:focus,
                 &:active {
                     outline: none;
-                      background-color: rgba($font-color, 0.3);
+                      background-color: rgba($font-color, 0.5);
                 }
             }
             &.active {
                 outline: none;
                 a {
-                    background-color: rgba($font-color, 0.3);
+                    background-color: rgba($font-color, 0.5);
                     &:hover {
                         color: $navbar-color;
                     }
                 }
             }
         }
+    }
+    .submit {
+        background-color: #C00000;
     }
     @media(min-width:768px) {
         padding: 20px 0;
@@ -160,17 +197,10 @@ a {
     display: table;
     width: 100%;
     height: auto;
-    padding: 100px 0;
+    padding: 0px 0;
     text-align: center;
     color: $intro-text-color;
-    {% if site.background-img %}
-    background: url({{ site.baseurl }}/{{ site.background-img }}) no-repeat bottom center scroll;
-    {% endif %}
     background-color: $header-background-color;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
     .intro-body {
         display: table-cell;
         vertical-align: middle;
@@ -197,6 +227,7 @@ a {
                 text-shadow: 1px 0 1px #000;
             }
         }
+        z-index: 1;
     }
     @media(min-width:768px) {
         height: 100%;
@@ -247,13 +278,9 @@ a {
 }
 
 .content-section {
-    margin-top: 100px;
-    padding-top: 100px;
+    margin-top: 25px;
+    padding-top: 25px;
     width: 100%;
-    @media(min-width:767px) {
-        margin-top: 125px;
-        padding-top: 125px;
-    }
     /* Added in { Personal } for responsive images in posts and section contents */
     img {
         display: block;
@@ -316,7 +343,50 @@ a {
         //     line-height: 1.6;
         // }
         text-align: justify;
+        text-justify: inter-word; 
     }
+}
+
+.p-left{
+    p {
+        // margin: 0 0 25px;
+        // font-size: 18px;
+        // line-height: 1.5;
+        // @media(min-width:768px) {
+        //     margin: 0 0 35px;
+        //     font-size: 18px;
+        //     line-height: 1.6;
+        // }
+        text-align: left;
+    }
+}
+
+.p-indent {
+    p {
+        // margin: 0 0 25px;
+        // font-size: 18px;
+        // line-height: 1.5;
+        // @media(min-width:768px) {
+        //     margin: 0 0 35px;
+        //     font-size: 18px;
+        //     line-height: 1.6;
+        // }
+        padding-left: 5%;
+    }
+}
+
+.header-center {
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+
+}
+
+.list-left { 
+    ul, ol {
+        text-align: left;
+    }
+
 }
 
 .btn {

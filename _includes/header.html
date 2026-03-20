@@ -2,33 +2,30 @@
 <!-- Intro Start -->
 
 <header class="intro">
-  <div class="intro-body">
-    <div class="container">
-      <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <h1 class="brand-heading">&nbsp;</h1>
-            <h1 class="brand-heading">&nbsp;</h1>
-            <h2>&nbsp;</h2>
-            <h2>&nbsp;</h2>
-            <h2>&nbsp;</h2>
-            <h2>&nbsp;</h2>
-            <h4>&nbsp;</h4>
-		<div class="page-title"> SAFE-AI: The 1st Workshop on <br> Systems & Architectures For <br> Encrypted AI</div>
-            	&nbsp;
-		<div class="page-text"> 31st March 2025 <br> Co-located with ASPLOS 2025, Rotterdam, Netherlands</div>
-            <a href="#{{ site.pages_list['About'] }}" class="page-scroll">
-		<!--
-              {% if site.me-img contains "https://" %}
-                <img class="img-me" src="{{ site.me-img }}" alt="">
-              {% else %}
-                <img class="img-me" src="{{site.baseurl}}{{ site.me-img }}" alt="">
-              {% endif %}
-		-->
-            </a>
+  <div class="image-container">
+    <div class="image-text">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <!-- <h1 class="brand-heading">&nbsp;</h1> -->
+              <!-- <h1 class="brand-heading">&nbsp;</h1> -->
+              <h2>&nbsp;</h2>
+              <h2>&nbsp;</h2>
+              <h2>&nbsp;</h2>
+              <h2>&nbsp;</h2>
+              <!-- <h4>&nbsp;</h4> -->
+              <div class="page-title"> The {{ page.wsorder }} Workshop on Systems & Architectures For Encrypted AI </div>
+              <div class="page-text"> {{ page.wsdate }} <br> {{ page.location }} </div>
+              <a href="#{{ page.pages_list['About'] }}" class="page-scroll">
+              </a>
+            </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </header>
+
 
 <!-- Intro End -->

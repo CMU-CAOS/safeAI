@@ -1,10 +1,19 @@
 ---
-layout: index
-section-type: index
-sitemap:
-  priority: 1.0
+layout: none
 ---
-<!--
-To have a static message in your intro layout, disable the dynamic-typing in the
-_config.yml and write your text here
--->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting to {{ site.latest_year }}...</title>
+    
+    <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/{{ site.latest_year }}/">
+    
+    <script>
+      window.location.href = "{{ site.baseurl }}/{{ site.latest_year }}/";
+    </script>
+  </head>
+  <body>
+    <p>If you are not redirected automatically, please <a href="{{ site.baseurl }}/{{ site.latest_year }}/">click here to visit the {{ site.latest_year }} site</a>.</p>
+  </body>
+</html>

@@ -13,7 +13,7 @@
         <a class="navbar-brand" href="{{site.baseurl}}/">
       {% endif %}
           <div>
-            {{ site.title }}
+            {{ site.title }} {{ page.year }}
           </div>
         </a>
     </div>
@@ -21,17 +21,16 @@
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
         {% if page.section-type == "index" %}
-
           <!-- Scroll to section for each page in index -->
-          {% for p in site.pages_list %}
-            {% if {{p[1]}} == "cv" %}
-            <li>
-              <a href="{{site.baseurl}}/{{site.cv}}" style="font-weight: bold;">{{p[0]}}</a>
-            </li>
+          {% for p in page.pages_list %}
+            {% if p[1] == "submit" %}
+              <li>
+                <a class="page-scroll submit" href="{{ page.submitURL }}" target="_blank" rel="noopener noreferrer"> {{p[0]}} </a>
+              </li>
             {% else %}
-            <li>
-              <a class="page-scroll" href="#{{ p[1] }}" style="font-weight: bold;"> {{p[0]}} </a>
-            </li>
+              <li>
+                <a class="page-scroll" href="#{{ p[1] }}"> {{p[0]}} </a>
+              </li>
             {% endif %}
           {% endfor %}
 
