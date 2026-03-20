@@ -1,12 +1,23 @@
-!index.html
-!img
-!img/
-!css/
-!js/
-
 *.html
 !index.html
 !404.html
+
+!index.html
+!css/
+!js/
+
+!2025/img
+!2025/img/
+!2025/css
+!2025/css/
+!2025/index.html
+
+!2026/img
+!2026/img/
+!2026/css
+!2026/css/
+!2026/index.html
+
 
 
 *.xml
