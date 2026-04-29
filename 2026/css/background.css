@@ -1,25 +1,5 @@
 ---
 ---
-/* .intro-{{page.year}} { */
-/* .image-container{
-    height: 100vh; 
-    width: 100%;
-} */
-
-/* .image-container::before {
-    content: "";
-    background-color: $header-background-color;
-    {% if page.background-img %}
-    background: url({{ site.baseurl }}/{{ page.year }}/{{ page.background-img }}) no-repeat bottom center scroll;
-    {% endif %}
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    filter: brightness(50%);
-    z-index: -1;
-} */
-
 .image-container {
     /* 1. Setup container size and relative positioning */
     position: relative;

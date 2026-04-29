@@ -156,14 +156,15 @@ defaults:
         Contribute: 'cfp'
         Program: 'program'
         Talks: 'talks'
+        Program Committee: 'pc'
         Organizers: 'organizers'
         Contact: 'contact'
         Past Events: 'previous'
         Submit: 'submit'
       background-img: "/img/raleigh.jpg"
       wsdate: "June 27, 2026"
-      location: "Co-located with ISCA 2026, Raleigh, USA"
-      submitURL: "https://www.google.com"
+      location: "Co-located with ISCA 2026, Raleigh, NC, USA"
+      submitURL: "https://safeai2026.hotcrp.com/"
 
 
 # Exclusion list from the generated _site

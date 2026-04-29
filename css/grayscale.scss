@@ -41,6 +41,7 @@ h1 {
     position: relative;
     padding: 20px 20px;      /* Space for the lines */
     margin: 20px auto;    /* Centers the heading on the page */
+    text-align: center;
 }
   
 h1::after {
@@ -107,9 +108,9 @@ a {
         text-decoration: none;
         color: darken($secondary-color,20%);
     }
-    word-break: break-all;
+    word-break: break-word;
     display: inline-block;
-    max-width: 100%;
+    // max-width: 100%;
 }
 
 .navbar-custom {
@@ -134,7 +135,7 @@ a {
     }
     .navbar-brand {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 24px;
         &:focus {
             outline: none;
         }
@@ -147,6 +148,7 @@ a {
     }
     .nav {
         text-align: center;
+        font-size: 12px;
         li {
             a {
                 -webkit-transition: background .3s ease-in-out;
@@ -178,9 +180,9 @@ a {
         background-color: #C00000;
     }
     @media(min-width:768px) {
-        padding: 20px 0;
+        padding: 5px 0;
         border-bottom: none;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
         background: $navbar-lg-background;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -358,6 +360,20 @@ a {
         //     line-height: 1.6;
         // }
         text-align: left;
+    }
+}
+
+p-center{
+    p {
+        // margin: 0 0 25px;
+        // font-size: 18px;
+        // line-height: 1.5;
+        // @media(min-width:768px) {
+        //     margin: 0 0 35px;
+        //     font-size: 18px;
+        //     line-height: 1.6;
+        // }
+        text-align: center;
     }
 }
 
