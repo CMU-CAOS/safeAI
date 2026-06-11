@@ -6,6 +6,10 @@
 
       {{ page.content | markdownify }}
 
+      {% if page.organizers %}
+        {% include person-grid.html people=page.organizers modifier="person-grid-organizers" %}
+      {% endif %}
+
     </div>
   </div>
 </section>

@@ -6,6 +6,16 @@
 
       {{ page.content | markdownify }}
 
+      {% if page.chairs %}
+        <h4>Program Chairs</h4>
+        {% include person-grid.html people=page.chairs modifier="person-grid-chairs" %}
+      {% endif %}
+
+      {% if page.committee %}
+        <h4>Program Committee</h4>
+        {% include person-grid.html people=page.committee %}
+      {% endif %}
+
     </div>
   </div>
 </section>

@@ -33,13 +33,13 @@ author: "Siddharth Jayashankar"
 title: "SAFE-AI"
 description: ""
 keywords: "encrypted, ai"
-favicon: "/img/geek.png"
+#favicon: "/img/geek.png"
 
 ################
 # Header layout #
 ################
 
-black-favicon: "/img/geek.png"
+#black-favicon: "/img/geek.png"
 
 
 ##############################
@@ -155,10 +155,8 @@ defaults:
         About: 'about'
         Contribute: 'cfp'
         Program: 'program'
-        Talks: 'talks'
         Program Committee: 'pc'
         Organizers: 'organizers'
-        Contact: 'contact'
         Past Events: 'previous'
         Submit: 'submit'
       background-img: "/img/raleigh.jpg"

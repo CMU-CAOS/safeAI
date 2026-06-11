@@ -1,0 +1,98 @@
+<div class="program-schedule table-responsive">
+  <table class="table program-table">
+    <tbody>
+      {% for item in include.items %}
+        {% if item.abstract %}
+          <tr class="program-session program-session-inline">
+            <td class="program-time">{{ item.time }}</td>
+            <td>
+              {% if item.type %}
+                <strong class="program-session-type">{{ item.type }}</strong>
+              {% endif %}
+              <span class="program-session-title">{{ item.title }}</span>
+              {% if item.speaker %}
+                <small class="program-session-speaker">
+                  {% if item.speaker_url %}
+                    <a href="{{ item.speaker_url }}">{{ item.speaker }}</a>
+                  {% else %}
+                    {{ item.speaker }}
+                  {% endif %}
+                </small>
+              {% endif %}
+              <div class="program-details program-details-inline">
+                <h5>Abstract</h5>
+                {{ item.abstract | markdownify }}
+                {% if item.bio or item.image or item.speaker_url %}
+                  <div class="program-speaker">
+                    {% if item.image %}
+                      <img class="program-speaker-img" src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.speaker }}">
+                    {% endif %}
+                    <div>
+                      <h5>Speaker Bio</h5>
+                      {% if item.bio %}
+                        {{ item.bio | markdownify }}
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% elsif item.collapse_id %}
+          <tr class="program-session">
+            <td class="program-time">{{ item.time }}</td>
+            <td>
+              <button class="program-toggle collapsed" type="button" data-toggle="collapse" data-target="#{{ item.collapse_id }}" aria-expanded="false" aria-controls="{{ item.collapse_id }}">
+                <span>
+                  {% if item.type %}
+                    <strong>{{ item.type }}</strong>
+                  {% endif %}
+                  <span>{{ item.title }}</span>
+                  {% if item.speaker %}
+                    <small>
+                      {% if item.speaker_url %}
+                        <a href="{{ item.speaker_url }}">{{ item.speaker }}</a>
+                      {% else %}
+                        {{ item.speaker }}
+                      {% endif %}
+                    </small>
+                  {% endif %}
+                </span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="collapse program-details" id="{{ item.collapse_id }}">
+                {% if item.abstract %}
+                  <h5>Abstract</h5>
+                  {{ item.abstract | markdownify }}
+                {% elsif item.details %}
+                  <p>{{ item.details }}</p>
+                {% endif %}
+                {% if item.bio or item.image or item.speaker_url %}
+                  <div class="program-speaker">
+                    {% if item.image %}
+                      <img class="program-speaker-img" src="{{ site.baseurl }}{{ item.image }}" alt="{{ item.speaker }}">
+                    {% endif %}
+                    <div>
+                      <h5>Speaker Bio</h5>
+                      {% if item.bio %}
+                        {{ item.bio | markdownify }}
+                      {% endif %}
+                    </div>
+                  </div>
+                {% endif %}
+                {% if item.link %}
+                  <a class="page-scroll program-link" href="{{ item.link }}">{{ item.link_text | default: "View details" }}</a>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% else %}
+          <tr>
+            <td class="program-time">{{ item.time }}</td>
+            <td>{{ item.title }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

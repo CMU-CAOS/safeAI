@@ -1,6 +1,77 @@
 ---
 layout: null
-section-type: about
-title: About
+section-type: program
+title: Program
+program:
+  - time: "8:50 AM - 9:00 AM"
+    title: "Welcome Remarks"
+  - time: "9:00 AM - 10:00 AM"
+    type: "Keynote Talk"
+    title: "Accelerating Modern Cryptography on Commodity Hardware"
+    speaker: "Srini Devadas, Massachusetts Institute of Technology"
+    speaker_url: "https://people.csail.mit.edu/devadas/"
+    image: "/2026/img/srini.jpg"
+    abstract: >-
+      Accelerating modern cryptography on commodity hardware requires designing algorithms that natively match the structure of vector cores, tensor cores, and distributed execution models. We show that modular arithmetic can be reshaped into wide‑vector Residue Number System pipelines that eliminate carry chains and permutation overhead, letting CPUs and GPUs deliver large speedups on signatures and other number‑theoretic kernels. ZKP provers can be similarly re‑architected: by converting high‑precision modular operations into dense low‑precision General Matrix-Matrix Multiplications and adopting shuffle‑free dataflows, tensor‑core hardware such as TPUs achieves order‑of‑magnitude gains on multi-scalar multiplications and number-theoretic transforms. At cluster scale, verifiable computation can be decomposed into parallel proof tasks aligned with the structure of distributed systems, replacing monolithic proofs with horizontally scalable, independently verifiable components. Together, these results argue that cryptographic performance hinges less on exotic hardware and more on algorithm–hardware co‑design: when cryptographic kernels are reformulated to fit vectorized, tensorized, and distributed execution, commodity platforms can deliver significant improvements in latency and throughput.
+    bio: >-
+      Srini Devadas is the Webster Professor of EECS at the Massachusetts Institute of Technology, where he has been on the faculty since 1988. Devadas has worked in the fields of Computer-Aided Design, computer architecture, computer security, and applied cryptography. His work in these fields has resulted in eight "test-of-time" awards, given to papers at least ten years after publication, and resulted in deployments in several commercial secure hardware devices and processors, and popular messaging applications.
+  - time: "10:00 AM - 10:30 AM"
+    title: "Coffee"
+  - time: "10:30 AM - 10:45 AM"
+    title: "TBD"
+    collapse_id: "ws-paper-1"
+    details: "TBD"
+  - time: "10:45 AM - 11:00 AM"
+    title: "TBD"
+    collapse_id: "ws-paper-2"
+    details: "TBD"
+  - time: "10:00 AM - 12:00 PM"
+    type: "Keynote Talk"
+    title: "TBD"
+    speaker: "Daniel Sanchez, Massachusetts Institute of Technology"
+    speaker_url: "https://people.csail.mit.edu/dsanchez/"
+    image: "/2026/img/daniel.jpg"
+    abstract: >-
+      In this talk I'll present an overview of my lab's work on private neural inference over the last 5 years. This will include a brief overview of our neural network optimizations and various hardware accelerators. The core focus of the talk will be our new FHE neural network compiler named Orion, which will appear in the main ASPLOS conference. Orion automates and optimizes FHE, providing SOTA performance with a PyTorch programming model, making FHE more accessible than ever before! I'll also explain how we pack vectors, leverage state-of-the-art FHE techniques, optimize level management and bootstrap placement, handle re-scaling, fit polynomial approximations, and deal with large data structures (e.g., weights and keys). To conclude, we will present a demo of our code and show how it can be used.
+    bio: >-
+      Dr. Reagen is a professor of Electrical and Computer Engineering at New York University with a focus on computer architecture. He leads a group of 7 PhD students whose current focus is to make cryptographic computing practical through algorithmic, compiler, and hardware optimizations for homomorphic encryption, zero-knowledge proofs, and secure multi-party computation. Prior to cryptographic computing, he made significant contributions to accelerator design and hardware for machine learning. The work has been recognized with multiple best paper nominations and Top Pick/honorable mention awards. He has further implemented many ideas, participating in multiple chip tape outs. He is actively a performer on the DARPA DPRIVE, PROWESS, and COOP programs, was recognized as a DARPA Riser in 2022, and won his NSF CAREER award in 2024. He has authored over 50 papers and holds one patent. He holds a Ph.D. in Computer Science from Harvard, B.S. degrees in Computer Engineering and Applied Mathematics from UMass, Amherst.
+  - time: "12:00 Noon - 1:30 PM"
+    title: "Lunch"
+  - time: "1:30 PM - 2:30 PM"
+    type: "Keynote Talk"
+    title: "HEIR: A Universal Compiler for Fully Homomorphic Encryption"
+    speaker: "Asra Ali, Google"
+    speaker_url: "https://x.com/asraentr0py"
+    image: "/2026/img/asra.jpg"
+    abstract: >-
+      The HEIR project is a compiler toolchain for fully homomorphic encryption (FHE) that aims to incorporate all major techniques and algorithmic optimizations in FHE, accelerate FHE research, and lower the barrier to production FHE deployments. As a universal compiler, it aims to support any FHE scheme along with a set of extensible optimizations and generate code for any FHE hardware accelerator. With that goal, it can act as a common benchmarking platform for new research ideas and hardware accelerators. In this talk, we'll demonstrate how to use HEIR's python frontend to generate code for a variety of different platforms. We'll also highlight some of the FHE techniques implemented in HEIR, such as data-oblivious program transformations, data layout optimization, relinearization placement, vectorization strategies, and more.
+    bio: >-
+      Asra Ali is a software engineer at Google currently working on compilers for fully homomorphic encryption. Her track record includes developing and maintaining many open source projects around privacy and security, including Google's Ring Learning with Errors implementation, Sigstore's transparency log Rekor, and The Update Framework's Go module. She's also worked on real world privacy preserving applications using FHE, resulting in one patent. Her background is in abstract math, and published research in number theory.
+  - time: "2:30 PM - 2:45 PM"
+    title: "TBD"
+    collapse_id: "ws-paper-3"
+    details: "TBD"
+  - time: "2:45 PM - 3:00 PM"
+    title: "TBD"
+    collapse_id: "ws-paper-4"
+    details: "TBD"
+  - time: "3:00 PM - 3:15 PM"
+    title: "TBD"
+    collapse_id: "ws-paper-5"
+    details: "TBD"
+  - time: "3:30 PM - 4:00 PM"
+    title: "Coffee"
+  - time: "4:00 PM - 5:00 PM"
+    type: "Keynote Talk"
+    title: "TBD"
+    speaker: "Daniel Sanchez, Massachusetts Institute of Technology"
+    speaker_url: "https://people.csail.mit.edu/dsanchez/"
+    image: "/2026/img/daniel.jpg"
+    abstract: >-
+      In this talk I'll present an overview of my lab's work on private neural inference over the last 5 years. This will include a brief overview of our neural network optimizations and various hardware accelerators. The core focus of the talk will be our new FHE neural network compiler named Orion, which will appear in the main ASPLOS conference. Orion automates and optimizes FHE, providing SOTA performance with a PyTorch programming model, making FHE more accessible than ever before! I'll also explain how we pack vectors, leverage state-of-the-art FHE techniques, optimize level management and bootstrap placement, handle re-scaling, fit polynomial approximations, and deal with large data structures (e.g., weights and keys). To conclude, we will present a demo of our code and show how it can be used.
+    bio: >-
+      Dr. Reagen is a professor of Electrical and Computer Engineering at New York University with a focus on computer architecture. He leads a group of 7 PhD students whose current focus is to make cryptographic computing practical through algorithmic, compiler, and hardware optimizations for homomorphic encryption, zero-knowledge proofs, and secure multi-party computation. Prior to cryptographic computing, he made significant contributions to accelerator design and hardware for machine learning. The work has been recognized with multiple best paper nominations and Top Pick/honorable mention awards. He has further implemented many ideas, participating in multiple chip tape outs. He is actively a performer on the DARPA DPRIVE, PROWESS, and COOP programs, was recognized as a DARPA Riser in 2022, and won his NSF CAREER award in 2024. He has authored over 50 papers and holds one patent. He holds a Ph.D. in Computer Science from Harvard, B.S. degrees in Computer Engineering and Applied Mathematics from UMass, Amherst.
+  - time: "5:00 PM"
+    title: "Closing Remarks"
 ---
 # Program
