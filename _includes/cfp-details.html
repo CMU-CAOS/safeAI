@@ -1,0 +1,62 @@
+<div class="cfp-details">
+  {% if include.dates %}
+    <div class="cfp-date-list">
+      {% for date in include.dates %}
+        <div class="cfp-date-item">
+          <div class="cfp-date-label">{{ date.label }}</div>
+          <div class="cfp-date-value">{{ date.value }}</div>
+          {% if date.note %}
+            <div class="cfp-date-note">{{ date.note }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if include.submission_url %}
+    <p class="cfp-submit">
+      <strong>Submission URL:</strong>
+      <a href="{{ include.submission_url }}">{{ include.submission_url }}</a>
+    </p>
+  {% endif %}
+
+  {% if include.topics %}
+    <h4>Topics of Interest</h4>
+    {% if include.topics_intro %}
+      <p class="cfp-topics-intro">{{ include.topics_intro }}</p>
+    {% endif %}
+    <ul class="cfp-topic-list">
+      {% for topic in include.topics %}
+        <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if include.guidelines %}
+    <h4>Submission Guidelines</h4>
+    <ul class="cfp-list">
+      {% for guideline in include.guidelines %}
+        <li>{{ guideline | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if include.additional or include.contact %}
+    <h4>Additional Information</h4>
+    {% if include.additional %}
+      <ul class="cfp-list">
+        {% for item in include.additional %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if include.contact %}
+      <p class="cfp-contact">
+        Contact: {{ include.contact.name }}
+        {% if include.contact.email %}
+          (<a href="mailto:{{ include.contact.email }}">{{ include.contact.email }}</a>)
+        {% endif %}
+      </p>
+    {% endif %}
+  {% endif %}
+</div>
