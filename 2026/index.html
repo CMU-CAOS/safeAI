@@ -42,8 +42,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   
-    <link rel="shortcut icon" type="image/x-icon" href="/safeAI/img/geek.png">
-  
 
   
 
@@ -119,19 +117,13 @@
           
             
               <li>
-                <a class="page-scroll" href="#cfp"> Contribute </a>
-              </li>
-            
-          
-            
-              <li>
                 <a class="page-scroll" href="#program"> Program </a>
               </li>
             
           
             
               <li>
-                <a class="page-scroll" href="#talks"> Talks </a>
+                <a class="page-scroll" href="#cfp"> Contribute </a>
               </li>
             
           
@@ -144,12 +136,6 @@
             
               <li>
                 <a class="page-scroll" href="#organizers"> Organizers </a>
-              </li>
-            
-          
-            
-              <li>
-                <a class="page-scroll" href="#contact"> Contact </a>
               </li>
             
           
@@ -225,8 +211,11 @@
     <div class="col-md-10 col-md-offset-1">
       <h1 id="about">About</h1>
 
-<p>This workshop on Encrypted AI will explore cutting-edge techniques for accelerating and democratizing privacy-preserving AI, focusing on Fully Homomorphic Encryption (FHE) and Secure Multi-party Computation (MPC). Designed in two parts, the workshop will first host sessions with invited speakers from academia and industry, who will share the latest advances in FHE for AI, real-world applications, and challenges in scaling encrypted AI.
-The workshop will cover a broad range of topics on systems and architectures for encrypted AI including acceleration techniques across the computing stack, compilers, tools, DSLs, and applications for encrypted AI.</p>
+<p>SAFE-AI brings together researchers and practitioners working at the intersection of encrypted computation, computer systems, and AI. The workshop focuses on the systems and architectural challenges behind practical privacy-preserving AI, with an emphasis on Fully Homomorphic Encryption (FHE), Secure Multi-party Computation (MPC), and Zero-Knowledge Proofs (ZKP).</p>
+
+<p>The program features invited talks, contributed submissions, and technical discussions from academia and industry, highlighting recent advances, real-world deployments, and open problems in scaling encrypted AI. The SAFE-AI workshop is a focused venue to present new ideas, share early results, and get feedback from a community working on building encrypted computation. Topics span the full computing stack, including hardware acceleration, system design, compilers, programming models, DSLs, tooling, and applications for encrypted computation.</p>
+
+<p>This workshop is ideal for researchers, engineers, students, and industry professionals interested in making encrypted AI practical: faster, easier to program, and deployable in realistic settings.</p>
 
     </div>
   </div>
@@ -239,53 +228,415 @@ The workshop will cover a broad range of topics on systems and architectures for
       
         
         
+        
+<!-- Program Start -->
+
+<section id="program" class="container content-section text-center program-table">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 id="program">Program</h1>
+
+      
+        <div class="program-schedule table-responsive">
+  <table class="table program-table">
+    <tbody>
+      
+        
+          <tr>
+            <td class="program-time">8:50 AM - 9:00 AM</td>
+            <td>Welcome Remarks</td>
+          </tr>
+        
+      
+        
+          <tr class="program-session program-session-inline">
+            <td class="program-time">9:00 AM - 10:00 AM</td>
+            <td>
+              
+                <strong class="program-session-type">Keynote Talk</strong>
+              
+              <span class="program-session-title">Accelerating Modern Cryptography on Commodity Hardware</span>
+              
+              
+                <small class="program-session-speaker">
+                  
+                    <a href="https://people.csail.mit.edu/devadas/">Srini Devadas, Massachusetts Institute of Technology</a>
+                  
+                </small>
+              
+              <div class="program-details program-details-inline">
+                <h5>Abstract</h5>
+                <p>Accelerating modern cryptography on commodity hardware requires designing algorithms that natively match the structure of vector cores, tensor cores, and distributed execution models. We show that modular arithmetic can be reshaped into wide-vector Residue Number System pipelines that eliminate carry chains and permutation overhead, letting CPUs and GPUs deliver large speedups on signatures and other number-theoretic kernels. ZKP provers can be similarly re-architected: by converting high-precision modular operations into dense low-precision General Matrix-Matrix Multiplications and adopting shuffle-free dataflows, tensor-core hardware such as TPUs achieves order-of-magnitude gains on multi-scalar multiplications and number-theoretic transforms. At cluster scale, verifiable computation can be decomposed into parallel proof tasks aligned with the structure of distributed systems, replacing monolithic proofs with horizontally scalable, independently verifiable components. Together, these results argue that cryptographic performance hinges less on exotic hardware and more on algorithm–hardware co‑design: when cryptographic kernels are reformulated to fit vectorized, tensorized, and distributed execution, commodity platforms can deliver significant improvements in latency and throughput.</p>
+
+                
+                  <div class="program-speaker">
+                    
+                      <img class="program-speaker-img" src="/safeAI/2026/img/srini.jpg" alt="Srini Devadas, Massachusetts Institute of Technology">
+                    
+                    <div>
+                      <h5>Speaker Bio</h5>
+                      
+                        <p>Srini Devadas is the Webster Professor of EECS at the Massachusetts Institute of Technology, where he has been on the faculty since 1988. Devadas has worked in the fields of Computer-Aided Design, computer architecture, computer security, and applied cryptography. His work in these fields has resulted in eight “test-of-time” awards, given to papers at least ten years after publication, and resulted in deployments in several commercial secure hardware devices and processors, and popular messaging applications.</p>
+
+                      
+                    </div>
+                  </div>
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="program-time">10:00 AM - 10:30 AM</td>
+            <td>Coffee</td>
+          </tr>
+        
+      
+        
+          <tr class="program-session">
+            <td class="program-time">10:30 AM - 10:45 AM</td>
+            <td>
+              <button class="program-toggle collapsed" type="button" data-toggle="collapse" data-target="#ws-paper-1" aria-expanded="false" aria-controls="ws-paper-1">
+                <span>
+                  
+                  <span>The Proof is in the Profiler: Lightweight Proof-Cost Profiling for Verifiable Neural Inference</span>
+                  
+                    <small class="program-session-authors">Noah Marosok (UCSD), Nojan Sheybani (UCSD), Ke Huang, Farinaz Koushanfar (UCSD)</small>
+                  
+                  
+                </span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="collapse program-details" id="ws-paper-1">
+                
+                  <p>Zero-knowledge proofs of neural-network inference (zkML) can certify model execution, but proving cost remains a central obstacle, especially for transformer-style models. FLOP counts are an incomplete proxy: field additions and multiplications are relatively natural for arithmetic proof systems, while comparisons, lookups, divisions, normalization, and transcendental functions introduce proof-unfriendly overheads. We present ZKTrace, a lightweight backend-agnostic profiler that traces small PyTorch models with torch.fx and reports both a FLOP/MAC baseline and an operator-aware proof-cost score. We validate on six approximately FLOP/MAC-matched model pairs using ezkl. In five of six pairs the higher-scored member proves slower; across all twelve models the proof-aware score ranks measured proving time at Spearman 0.83 versus 0.59 for the baseline. The result is preliminary: ZKTrace is an early-stage design tool, not a proving system or exact prover-time predictor.</p>
+                
+                
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr class="program-session">
+            <td class="program-time">10:45 AM - 11:00 AM</td>
+            <td>
+              <button class="program-toggle collapsed" type="button" data-toggle="collapse" data-target="#ws-paper-2" aria-expanded="false" aria-controls="ws-paper-2">
+                <span>
+                  
+                  <span>VOLE-ocity: Speeding Up Publicly Verifiable VOLE-in-the-Head Zero-Knowledge Proofs</span>
+                  
+                    <small class="program-session-authors">Tengkai Gong (Northeastern), Nojan Sheybani (UCSD), Xiaolin Xu (Northeastern), Farinaz Koushanfar (UCSD)</small>
+                  
+                  
+                </span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="collapse program-details" id="ws-paper-2">
+                
+                  <p>Zero-knowledge proofs (ZKPs) are increasingly important for privacy-preserving and encrypted computation, including federated learning, verifiable inference, and secure data analytics. However, most existing ZKP accelerators target ZKP protocols based on arithmetic circuits over large prime fields. These are often rendered inefficient for Boolean-heavy computations, where native operations are bit-level AND and XOR gates rather than large-field additions and multiplications. As encrypted-AI systems increasingly incorporate quantized, Boolean, and cryptographic components, this Boolean-to-arithmetic mismatch becomes a key obstacle to efficient proof generation. This paper explores Vector Oblivious Linear Evaluation-in-the-Head (VOLEitH) as an alternative protocol substrate for publicly verifiable Boolean ZKPs. VOLEitH transforms efficient designated-verifier VOLE-based ZK protocols into non-interactive, publicly verifiable, post-quantum-secure proofs. We present VOLE-ocity, an FPGA-based accelerator for VOLEitH proof generation. VOLE-ocity decomposes the prover into hardware-optimized modules for GGM-tree vector commitments, streaming VOLE conversion, and gate-by-gate Boolean circuit evaluation. Our prototype, implemented with HLS on a Xilinx Virtex UltraScale+ FPGA, achieves up to 28× speedup over highly optimized CPU baselines on SHA-256 and Keccak-f circuits. Finally, we discuss how hardware-accelerated Boolean ZK can serve as a foundation for future VOLE-based machine-learning proof systems, particularly for quantized and Boolean neural-network workloads.</p>
+                
+                
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr class="program-session program-session-inline">
+            <td class="program-time">11:00 AM - 12:00 PM</td>
+            <td>
+              
+                <strong class="program-session-type">Keynote Talk</strong>
+              
+              <span class="program-session-title"></span>
+              
+              
+                <small class="program-session-speaker">
+                  
+                    <a href="https://people.csail.mit.edu/dsanchez/">Daniel Sanchez, Massachusetts Institute of Technology</a>
+                  
+                </small>
+              
+              <div class="program-details program-details-inline">
+                <h5>Abstract</h5>
+                
+
+                
+                  <div class="program-speaker">
+                    
+                      <img class="program-speaker-img" src="/safeAI/2026/img/daniel.jpg" alt="Daniel Sanchez, Massachusetts Institute of Technology">
+                    
+                    <div>
+                      <h5>Speaker Bio</h5>
+                      
+                        
+
+                      
+                    </div>
+                  </div>
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="program-time">12:00 PM - 1:30 PM</td>
+            <td>Lunch</td>
+          </tr>
+        
+      
+        
+          <tr class="program-session program-session-inline">
+            <td class="program-time">1:30 PM - 2:30 PM</td>
+            <td>
+              
+                <strong class="program-session-type">Keynote Talk</strong>
+              
+              <span class="program-session-title">Scaling Encrypted Computing: Realities of Deployment</span>
+              
+              
+                <small class="program-session-speaker">
+                  
+                    <a href="https://x.com/asraentr0py">Asra Ali, Google</a>
+                  
+                </small>
+              
+              <div class="program-details program-details-inline">
+                <h5>Abstract</h5>
+                <p>This talk will explore real world privacy-sensitive applications our group is investigating that can be addressed with encrypted computing solutions. We will detail common deployment obstacles including latency, memory bandwidth, key management, and other organizational and systemic challenges. We examine the role of encrypted computation development platforms, including the HEIR compiler, to overcome these barriers and to provide layers of abstraction to connect components of a production system. Finally, we outline solutions laying the foundation to achieve wider encrypted computation adoption.</p>
+
+                
+                  <div class="program-speaker">
+                    
+                      <img class="program-speaker-img" src="/safeAI/2026/img/asra.jpg" alt="Asra Ali, Google">
+                    
+                    <div>
+                      <h5>Speaker Bio</h5>
+                      
+                        <p>Asra Ali is a software engineer at Google actively working on compilers for fully homomorphic encryption. Her track record includes developing and maintaining many open source projects around privacy and security, including Google’s Ring Learning with Errors implementation, the Sigstore ecosystem for zero trust supply chain security, and the open-source network proxy Envoy. She’s also worked on real world privacy preserving applications using FHE, resulting in one patent. Her background is in abstract math, and published research in number theory.</p>
+
+                      
+                    </div>
+                  </div>
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr class="program-session">
+            <td class="program-time">2:30 PM - 2:45 PM</td>
+            <td>
+              <button class="program-toggle collapsed" type="button" data-toggle="collapse" data-target="#ws-paper-3" aria-expanded="false" aria-controls="ws-paper-3">
+                <span>
+                  
+                  <span>A Programmable SumCheck Accelerator for Zero-Knowledge Proofs</span>
+                  
+                    <small class="program-session-authors">Alhad Daftardar, Jianqiao Mo, Brandon Reagen (NYU)</small>
+                  
+                  
+                </span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="collapse program-details" id="ws-paper-3">
+                
+                  <p> Zero-Knowledge Proofs (ZKPs) enable privacy-preserving verification but remain difficult to deploy due to high proof-generation costs. Recent work has explored hardware and GPU acceleration across diverse ZKP schemes, each with different trade-offs in overhead, proof size, verifier cost, setup, and trust. This work targets a key bottleneck in modern ZKP systems: supporting complex, high-degree custom gates through the SumCheck protocol. We propose a programmable accelerator for arbitrary SumCheck-based gates, achieving over 1000× geomean speedup over CPU SumChecks across multiple gate types. Integrated into zkPHIRE, a full-system programmable accelerator for HyperPlonk, the design achieves 1486× geomean speedup over CPU and 11.87× 11.87× over prior state-of-the-art at iso-area, while scaling beyond 2^30 constraints and maintaining compact 4-5 KB proofs.</p>
+                
+                
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr class="program-session">
+            <td class="program-time">2:45 PM - 3:00 PM</td>
+            <td>
+              <button class="program-toggle collapsed" type="button" data-toggle="collapse" data-target="#ws-paper-4" aria-expanded="false" aria-controls="ws-paper-4">
+                <span>
+                  
+                  <span>Orbit: Optimizing Rescale and Bootstrap Placement with ILP Techniques </span>
+                  
+                    <small class="program-session-authors">Edward Chen (CMU), Zikai Zhou (Tsinghua), William Seo (CMU), Alex Ozdemir (Max Planck, GaTech), Fraser Brown (CMU), Wenting Zheng (CMU)</small>
+                  
+                  
+                </span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="collapse program-details" id="ws-paper-4">
+                
+                  <p>Fully Homomorphic Encryption (FHE) allows computation on encrypted data without decrypting it. In theory, FHE makes privacy-preserving machine learning possible. In practice, however, it remains extremely slow for real workloads. A major source of slowdown is bootstrap operations; in CKKS, a popular FHE scheme for tensor workloads, the slowdown is compounded by scale management and rescale operations. Existing FHE compilers miss crucial optimization opportunities because they overlook a key property of CKKS programs: bootstrap and rescale placement are fundamentally coupled through the level budget. We present ORBIT, an FHE compiler that jointly optimizes bootstrap and rescale placement through a novel Integer Linear Programming (ILP) formulation that reasons about both ciphertext level and scale constraints. To make this formulation tractable for structured tensor workloads, we introduce three techniques that reduce ILP complexity while preserving optimality. Across five convolutional neural networks and multiple cryptographic parameter configurations, ORBIT achieves a geometric mean speedup of up to 19% over DACAPO, 73% over ORION, and 52% over RESBM, keeps compilation under 6 minutes, and retains model accuracy within 0.3% of plaintext execution.</p>
+                
+                
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr class="program-session">
+            <td class="program-time">3:00 PM - 3:15 PM</td>
+            <td>
+              <button class="program-toggle collapsed" type="button" data-toggle="collapse" data-target="#ws-paper-5" aria-expanded="false" aria-controls="ws-paper-5">
+                <span>
+                  
+                  <span>Cerium: A Multi-GPU Framework For TB-Scale Encrypted Inference</span>
+                  
+                    <small class="program-session-authors">Siddharth Jayashankar (CMU), Joshua Kim (UT Austin), Michael B. Sullivan (NVIDIA), Wenting Zheng, Dimitrios Skarlatos (CMU)</small>
+                  
+                  
+                </span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="collapse program-details" id="ws-paper-5">
+                
+                  <p>Encrypted AI using fully homomorphic encryption (FHE) provides strong privacy guarantees; but its slow performance has limited practical deployment. Recent works proposed ASICs to accelerate FHE, but require expensive advanced manufacturing processes that constrain their accessibility. GPUs are a far more accessible platform, but achieving ASIC-level performance using GPUs has remained elusive. Furthermore, state-of-the-art approaches primarily focus on small models that fit comfortably within a single device. Supporting large models such as LLMs in FHE introduces a dramatic increase in computational complexity that requires optimized GPU kernels, along with managing terabyte-scale memory footprints that far exceed the capacity of a single GPU. This paper presents Cerium, a multi-GPU framework for FHE inference on large models. Cerium integrates a domain-specific language, an optimizing compiler, and a runtime system to automatically generate high-performance GPU kernels, manage terabyte-scale memory footprints, and parallelize computation across multiple GPUs. It introduces new IR constructs, compiler passes, sparse polynomial representations, memory-efficient data layouts, and communication-aware parallelization techniques that together enable encrypted inference for models ranging from small CNNs to Llama3-8B. We build Cerium on NVIDIA GPUs and demonstrate significant performance gains. For small models, Cerium outperforms expert-written hand-optimized GPU libraries by up to 2.25 times. Cerium achieves performance competitive with state-of-the-art FHE ASICs, outright matching prior FHE ASIC CraterLake. It is the first GPU system to execute bootstrapping in under 10 milliseconds, achieving 7.5 milliseconds, and is the first to demonstrate encrypted inference for BERT-Base and Llama3-8B in 8 seconds and 43 seconds, respectively.</p>
+                
+                
+                
+              </div>
+            </td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="program-time">3:15 PM - 3:30 PM</td>
+            <td>Closing Remarks</td>
+          </tr>
+        
+      
+        
+          <tr>
+            <td class="program-time">3:30 PM - 4:00 PM</td>
+            <td>Coffee</td>
+          </tr>
+        
+      
+    </tbody>
+  </table>
+</div>
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- Program End -->
+
+      
+    
+      
+        
+        
         <!-- CFP Start -->
 
-<section id="cfp" class="container content-section p-left p-indent list-left">
+<section id="cfp" class="container content-section cfp-section">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
 
       <h1 id="call-for-papers">Call For Papers</h1>
 
-<h4 id="important-dates">Important Dates</h4>
 
-<p><strong>Submission Deadline</strong>: 21st May, 2026 (Anywhere on Earth)
-<br />
-<strong>Author Notification</strong>: 1st June, 2026
-<br />
-<strong>Submission URL</strong>: <a href="https://safeai2026.hotcrp.com/">https://safeai2026.hotcrp.com/</a></p>
+      <div class="cfp-details">
+  
+    <div class="cfp-date-list">
+      
+        <div class="cfp-date-item">
+          <div class="cfp-date-label">Submission Deadline</div>
+          <div class="cfp-date-value">21st May, 2026 (AoE)</div>
+          
+        </div>
+      
+        <div class="cfp-date-item">
+          <div class="cfp-date-label">Author Notification</div>
+          <div class="cfp-date-value">1st June, 2026</div>
+          
+        </div>
+      
+        <div class="cfp-date-item">
+          <div class="cfp-date-label">Workshop Date</div>
+          <div class="cfp-date-value">27th June, 2026</div>
+          
+        </div>
+      
+    </div>
+  
 
-<h4 id="topics-of-interest">Topics of Interest</h4>
+  
+    <p class="cfp-submit">
+      <strong>Submission URL:</strong>
+      <a href="https://safeai2026.hotcrp.com/">https://safeai2026.hotcrp.com/</a>
+    </p>
+  
 
-<p>We invite submissions for contributions to the workshop that specifically address the systems-related challenges and advancements within the domain of encrypted computation.
-The focus of this call is on innovative research, development, and deployment of systems that enable practical, efficient, and secure computation on encrypted data.
-Our key areas of interest include, but are certainly not limited to, the following topics:</p>
-<ul>
-  <li>Fully Homomorphic Encryption (FHE)</li>
-  <li>Secure Multi-Party Computation (MPC)</li>
-  <li>Zero-Knowledge Proofs (ZKP)</li>
-  <li>Hardware Architectures for Encrypted Computation</li>
-  <li>System Design and Infrastructure for Encrypted Computation</li>
-  <li>Compilers, Programming Languages, and Tools for Encrypted Computation</li>
-  <li>Applications and Use Cases leveraging Encrypted Computing</li>
-  <li>Position papers on any system aspects of encrypted computing</li>
-</ul>
+  
+    <h4>Topics of Interest</h4>
+    
+      <p class="cfp-topics-intro">We invite submissions for contributions to the workshop that specifically address the systems-related challenges and advancements within the domain of encrypted computation. The focus of this call is on innovative research, development, and deployment of systems that enable practical, efficient, and secure computation on encrypted data. Our key areas of interest include, but are certainly not limited to, the following topics:</p>
+    
+    <ul class="cfp-topic-list">
+      
+        <li>Fully Homomorphic Encryption (FHE)</li>
+      
+        <li>Secure Multi-Party Computation (MPC)</li>
+      
+        <li>Zero-Knowledge Proofs (ZKP)</li>
+      
+        <li>Hardware Architectures for Encrypted Computation</li>
+      
+        <li>System Design and Infrastructure for Encrypted Computation</li>
+      
+        <li>Compilers, Programming Languages, and Tools for Encrypted Computation</li>
+      
+        <li>Applications and Use Cases leveraging Encrypted Computing</li>
+      
+        <li>Position papers on systems aspects of encrypted computing</li>
+      
+    </ul>
+  
 
-<h4 id="submission-guidelines">Submission Guidelines</h4>
+  
+    <h4>Submission Guidelines</h4>
+    <ul class="cfp-list">
+      
+        <li>Please follow the <a href="https://iscaconf.org/isca2026/submit/guidelines.php">ISCA 2026 submission guidelines</a>.
+</li>
+      
+        <li>Submissions are limited to <strong>2 pages</strong> not including references.
+</li>
+      
+        <li>Submissions must be anonymous and should not include any author identifying information.
+</li>
+      
+        <li>Both unpublished and previously published works, as well as works in progress, are welcome.
+</li>
+      
+    </ul>
+  
 
-<ul>
-  <li>Please follow the <a href="https://iscaconf.org/isca2026/submit/guidelines.php">ISCA 2026 submission guidelines</a>.</li>
-  <li>Submissions are limited to <strong>2 pages</strong> not including references.</li>
-  <li>Submissions must be anonymous and should not include any author identifying information.</li>
-  <li>Both unpublished and previously published works, as well as works in progress, are welcome.</li>
-</ul>
-
-<h4 id="additional-information">Additional Information</h4>
-
-<p>Proceedings will not be published.
-<br />
-Contact: Dimitrios Skarlatos (dskarlat@cs.cmu.edu)</p>
-
+  
+    <h4>Additional Information</h4>
+    
+      <ul class="cfp-list">
+        
+          <li>Proceedings will not be published.</li>
+        
+      </ul>
+    
+    
+  
+</div>
 
 
     </div>
@@ -300,50 +651,6 @@ Contact: Dimitrios Skarlatos (dskarlat@cs.cmu.edu)</p>
         
         
         
-<!-- Program Start -->
-
-<section id="about" class="container content-section text-center program-table">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <h1 id="program">Program</h1>
-
-    </div>
-  </div>
-</section>
-
-<!-- Program End -->
-
-      
-    
-      
-        
-        
-        
-<!-- Talks Start -->
-
-<section id="about" class="container content-section text-center p-left">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <h1 id="talks">Talks</h1>
-
-<p style="text-align:center">
-Talks featuring speakers across acadmeia and industry on the latest exciting developments in encrypted computing.
-</p>
-
-<hr />
-
-    </div>
-  </div>
-</section>
-
-<!-- Talks End -->
-
-      
-    
-      
-        
-        
-        
 <!-- PC Start -->
 <section id="pc" class="container content-section p-center header-center">
   <div class="row">
@@ -351,48 +658,154 @@ Talks featuring speakers across acadmeia and industry on the latest exciting dev
 
       <h1 id="program-committees">Program Committees</h1>
 
-<h4 id="program-chairs">Program Chairs</h4>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Dimitrios Skarlatos (CMU)</td>
-      <td>Siddharth Jayashankar (CMU)</td>
-    </tr>
-  </tbody>
-</table>
+      
+        <h4>Program Chairs</h4>
+        
+  <div class="person-grid person-grid-chairs">
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            <a href="https://www.cs.cmu.edu/~dskarlat/">Dimitrios Skarlatos</a>
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+          <div class="person-email">
+            <a href="mailto:dskarlat@cs.cmu.edu">dskarlat@cs.cmu.edu</a>
+          </div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            <a href="https://sidjay10.github.io">Siddharth Jayashankar</a>
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+          <div class="person-email">
+            <a href="mailto:sidjay@cmu.edu">sidjay@cmu.edu</a>
+          </div>
+        
+      </div>
+    
+  </div>
 
-<hr />
 
-<h4 id="program-committee">Program Committee</h4>
+      
 
-<table>
-  <tbody>
-    <tr>
-      <td>Brandon Reagen (NYU)</td>
-      <td>Jung Ho Ahn (SNU)</td>
-    </tr>
-    <tr>
-      <td>Wenting Zheng (CMU)</td>
-      <td>Mike Sullivan (Nvidia)</td>
-    </tr>
-    <tr>
-      <td>Mingyu Gao (Tsinghua)</td>
-      <td>Ro Cammarota (UC Irvine)</td>
-    </tr>
-    <tr>
-      <td>Asmita Pal (AMD)</td>
-      <td>Edward Chen (CMU)</td>
-    </tr>
-    <tr>
-      <td>Jianming Tong (Georgia Tech)</td>
-      <td>Naifeng Zhang (CMU)</td>
-    </tr>
-  </tbody>
-</table>
+      
+        <h4>Program Committee</h4>
+        
+  <div class="person-grid">
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Brandon Reagen
+          
+        </div>
+        <div class="person-affiliation">New York University</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Jung Ho Ahn
+          
+        </div>
+        <div class="person-affiliation">Seoul National University</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Wenting Zheng
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Mike Sullivan
+          
+        </div>
+        <div class="person-affiliation">Nvidia</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Mingyu Gao
+          
+        </div>
+        <div class="person-affiliation">Tsinghua University</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Ro Cammarota
+          
+        </div>
+        <div class="person-affiliation">UC Irvine</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Asmita Pal
+          
+        </div>
+        <div class="person-affiliation">AMD</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Edward Chen
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Jianming Tong
+          
+        </div>
+        <div class="person-affiliation">Georgia Tech</div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            Naifeng Zhang
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+      </div>
+    
+  </div>
 
-<hr />
 
+      
 
     </div>
   </div>
@@ -412,46 +825,77 @@ Talks featuring speakers across acadmeia and industry on the latest exciting dev
 
       <h1 id="organizers">Organizers</h1>
 
-<p><a href="https://sidjay10.github.io">Siddharth Jayashankar</a>,
-<a href="https://wzheng.github.io">Wenting Zheng</a>,
-<a href="https://www.cs.cmu.edu/~dskarlat/">Dimitrios Skarlatos</a>
-<br />
-Carnegie Mellon University</p>
 
-<p><a href="https://engineering.nyu.edu/faculty/brandon-reagen">Brandon Reagen</a>
-<br />
-New York University</p>
+      
+        
+  <div class="person-grid person-grid-organizers">
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            <a href="https://sidjay10.github.io">Siddharth Jayashankar</a>
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+          <div class="person-email">
+            <a href="mailto:sidjay@cmu.edu">sidjay@cmu.edu</a>
+          </div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            <a href="https://www.cs.cmu.edu/~dskarlat/">Dimitrios Skarlatos</a>
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+          <div class="person-email">
+            <a href="mailto:dskarlat@cs.cmu.edu">dskarlat@cs.cmu.edu</a>
+          </div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            <a href="https://wzheng.github.io">Wenting Zheng</a>
+          
+        </div>
+        <div class="person-affiliation">Carnegie Mellon University</div>
+        
+          <div class="person-email">
+            <a href="mailto:wenting@cmu.edu">wenting@cmu.edu</a>
+          </div>
+        
+      </div>
+    
+      <div class="person-cell">
+        <div class="person-name">
+          
+            <a href="https://engineering.nyu.edu/faculty/brandon-reagen">Brandon Reagen</a>
+          
+        </div>
+        <div class="person-affiliation">New York University</div>
+        
+          <div class="person-email">
+            <a href="mailto:bjr5@nyu.edu">bjr5@nyu.edu</a>
+          </div>
+        
+      </div>
+    
+  </div>
 
 
+      
 
     </div>
   </div>
 </section>
 
 <!-- Organizers End -->
-
-      
-    
-      
-        
-        
-        <!-- Contact Start -->
-
-<section id="contact" class="container content-section text-center">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-
-      <h1 id="contact">Contact</h1>
-
-<p>Dimitrios Skarlatos (dskarlat@cs.cmu.edu)</p>
-
-
-
-    </div>
-  </div>
-</section>
-
-<!-- Contact End -->
 
       
     
