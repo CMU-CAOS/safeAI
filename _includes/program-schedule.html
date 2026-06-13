@@ -10,6 +10,9 @@
                 <strong class="program-session-type">{{ item.type }}</strong>
               {% endif %}
               <span class="program-session-title">{{ item.title }}</span>
+              {% if item.authors %}
+                <small class="program-session-authors">{{ item.authors }}</small>
+              {% endif %}
               {% if item.speaker %}
                 <small class="program-session-speaker">
                   {% if item.speaker_url %}
@@ -48,6 +51,9 @@
                     <strong>{{ item.type }}</strong>
                   {% endif %}
                   <span>{{ item.title }}</span>
+                  {% if item.authors %}
+                    <small class="program-session-authors">{{ item.authors }}</small>
+                  {% endif %}
                   {% if item.speaker %}
                     <small>
                       {% if item.speaker_url %}

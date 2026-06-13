@@ -6,6 +6,8 @@
 
       {{ page.content | markdownify }}
 
+      {% include cfp-details.html dates=page.important_dates submission_url=page.submission_url topics_intro=page.topics_intro topics=page.topics guidelines=page.guidelines additional=page.additional contact=page.contact %}
+
     </div>
   </div>
 </section>

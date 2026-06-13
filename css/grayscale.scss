@@ -405,6 +405,122 @@ p-center{
 
 }
 
+.cfp-section {
+    text-align: left;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+
+    h4 {
+        margin: 34px 0 16px;
+        color: #111;
+        text-align: left;
+        letter-spacing: 0;
+    }
+}
+
+.cfp-details {
+    max-width: 900px;
+    margin: 8px auto 0;
+}
+
+.cfp-date-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 24px 0 20px;
+}
+
+.cfp-date-item {
+    flex: 1 1 260px;
+    padding: 16px 18px;
+    border-top: 1px dotted rgba(128, 128, 128, 0.55);
+    border-bottom: 1px dotted rgba(128, 128, 128, 0.35);
+}
+
+.cfp-date-label {
+    color: $secondary-color;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.cfp-date-value {
+    margin-top: 6px;
+    color: #111;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.cfp-date-note {
+    margin-top: 4px;
+    color: rgba(0, 0, 0, 0.58);
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.cfp-submit {
+    margin: 8px 0 24px;
+    text-align: left;
+}
+
+.cfp-topics-intro {
+    margin: 0 0 14px;
+}
+
+.cfp-section .cfp-topic-list {
+    column-count: 2;
+    column-gap: 34px;
+    margin: 0 0 18px 24px;
+    padding-left: 18px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.35;
+    list-style-position: outside;
+}
+
+.cfp-section .cfp-topic-list li {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    padding-left: 2px;
+}
+
+.cfp-section .cfp-list {
+    margin: 0 0 18px 24px;
+    padding-left: 18px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1.55;
+    list-style-position: outside;
+}
+
+.cfp-section .cfp-list li {
+    margin-bottom: 8px;
+    padding-left: 2px;
+}
+
+.cfp-contact {
+    margin-top: 0;
+}
+
+@media(max-width:767px) {
+    .cfp-section .cfp-topic-list {
+        column-count: 1;
+    }
+}
+
 .person-grid {
     display: flex;
     flex-wrap: wrap;
@@ -782,6 +898,7 @@ body {
       }
       .program-session-type,
       .program-session-title,
+      .program-session-authors,
       .program-session-speaker {
         display: block;
         text-align: left;
@@ -802,6 +919,13 @@ body {
         margin-top: 4px;
         color: #333;
         font-size: 14px;
+        line-height: 1.35;
+      }
+      .program-session-authors {
+        margin-top: 4px;
+        color: rgba(0, 0, 0, 0.62);
+        font-size: 14px;
+        font-style: italic;
         line-height: 1.35;
       }
       .program-toggle span span {
@@ -837,6 +961,7 @@ body {
       }
       .program-details p {
         margin: 0 0 10px;
+        color: rgba(0, 0, 0, 0.72);
         font-size: 15px;
         line-height: 1.5;
         text-align: left;

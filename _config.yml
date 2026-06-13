@@ -153,8 +153,8 @@ defaults:
       wsorder: "2nd"
       pages_list:
         About: 'about'
-        Contribute: 'cfp'
         Program: 'program'
+        Contribute: 'cfp'
         Program Committee: 'pc'
         Organizers: 'organizers'
         Past Events: 'previous'
