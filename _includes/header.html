@@ -16,7 +16,11 @@
               <h2>&nbsp;</h2>
               <!-- <h4>&nbsp;</h4> -->
               <div class="page-title"> The {{ page.wsorder }} Workshop on Systems & Architectures For Encrypted AI </div>
-              <div class="page-text"> {{ page.wsdate }} <br> {{ page.location }} </div>
+              <div class="page-text">
+                {{ page.location }}<br>
+                {{ page.wsdate }}
+                {% if page.room %}<br>{{ page.room }}{% endif %}
+              </div>
               <a href="#{{ page.pages_list['About'] }}" class="page-scroll">
               </a>
             </div>

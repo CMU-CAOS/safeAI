@@ -162,6 +162,7 @@ defaults:
       background-img: "/img/raleigh.jpg"
       wsdate: "June 27, 2026"
       location: "Co-located with ISCA 2026, Raleigh, NC, USA"
+      room: "Room 306C, Raleigh Convention Center"
       submitURL: "https://safeai2026.hotcrp.com/"
 
 
