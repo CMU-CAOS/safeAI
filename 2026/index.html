@@ -237,7 +237,7 @@
       <h1 id="program">Program</h1>
 
       
-        <div class="program-schedule table-responsive">
+        <div class="program-schedule">
   <table class="table program-table">
     <tbody>
       
@@ -353,7 +353,7 @@
               
                 <strong class="program-session-type">Keynote Talk</strong>
               
-              <span class="program-session-title"></span>
+              <span class="program-session-title">A Hardware and Software Architecture to Accelerate Computation on Encrypted Data</span>
               
               
                 <small class="program-session-speaker">
@@ -364,7 +364,7 @@
               
               <div class="program-details program-details-inline">
                 <h5>Abstract</h5>
-                
+                <p>Fully Homomorphic Encryption (FHE) enables computing directly on encrypted data, letting clients securely offload computation to untrusted servers. While enticing, FHE suffers from two key challenges. First, it incurs very high overheads: it is about 10,000x slower than native, unencrypted computation on a CPU. Second, FHE is extremely hard to program: translating even simple applications like neural networks takes months of tedious work by FHE experts. In this talk, I will describe a hardware and software stack that tackles these challenges. First, I will present a programmable hardware architecture that accelerates FHE programs by 5,000x vs. a CPU with similar area and power, erasing most of the overheads of FHE. Second, I will introduce a domain-specific compiler that abstracts away the details of FHE. This compiler exposes a simple, numpy-like tensor programming interface, and produces FHE programs that match or outperform painstakingly optimized manual versions. Together, these techniques make FHE fast and easy to use across many domains, including deep learning, tensor algebra, and other analytic tasks.</p>
 
                 
                   <div class="program-speaker">
@@ -374,7 +374,7 @@
                     <div>
                       <h5>Speaker Bio</h5>
                       
-                        
+                        <p>Daniel Sanchez is a Professor of Electrical Engineering and Computer Science at MIT. His research interests include scalable memory hierarchies, architectural support for parallelization, and accelerators for sparse computations and secure computing.</p>
 
                       
                     </div>
