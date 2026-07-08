@@ -123,6 +123,12 @@
           
             
               <li>
+                <a class="page-scroll" href="#photos"> Photos </a>
+              </li>
+            
+          
+            
+              <li>
                 <a class="page-scroll" href="#cfp"> Contribute </a>
               </li>
             
@@ -543,6 +549,130 @@
       
         
         
+        <!-- Photos Start -->
+
+<section id="photos" class="container content-section text-center photos-section">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1 id="workshop-photos">Workshop Photos</h1>
+
+      
+
+
+  <div id="workshop-photo-carousel-2026" class="carousel slide carousel-fade photo-slideshow" data-ride="carousel" data-interval="6000" data-pause="false">
+    <div class="carousel-inner" role="listbox">
+      
+        <figure class="item active">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo1.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo1.jpg" alt="Srini's keynote talk">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo2.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo2.jpg" alt="Audience at SAFE AI 2026 workshop">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo3.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo3.jpg" alt="Daniel's keynote talk">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo4.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo4.jpg" alt="Edward presenting Orbit">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo5.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo5.jpg" alt="Siddharth presenting Cerium">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo6.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo6.jpg" alt="Alhad's presentation">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo7.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo7.jpg" alt="Asra's keynote talk">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo8.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo8.jpg" alt="Nojan's presentation">
+          </a>
+          
+        </figure>
+      
+        <figure class="item">
+          <a class="photo-slide-link" href="/safeAI/2026/img/photos/photo9.jpg" target="_blank" rel="noopener noreferrer">
+            <img src="/safeAI/2026/img/photos/photo9.jpg" alt="SAFE AI 2026 workshop group photo">
+          </a>
+          
+        </figure>
+      
+    </div>
+
+    
+      <ol class="carousel-indicators photo-slide-indicators">
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="0" class="active"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="1"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="2"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="3"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="4"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="5"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="6"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="7"></li>
+        
+          <li data-target="#workshop-photo-carousel-2026" data-slide-to="8"></li>
+        
+      </ol>
+
+      <a class="left carousel-control photo-slide-control" href="#workshop-photo-carousel-2026" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control photo-slide-control" href="#workshop-photo-carousel-2026" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    
+  </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Photos End -->
+
+      
+    
+      
+        
+        
         <!-- CFP Start -->
 
 <section id="cfp" class="container content-section cfp-section">
@@ -954,6 +1084,7 @@ Co-located with ASPLOS 2025, Rotterdam, Netherlands</p>
 function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
 $(document).ready(toggleNavCollapse);
 $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click",function(b){var a=$(this);$("html, body").stop().animate({scrollTop:$(a.attr("href")).offset().top-50},1500,"easeInOutExpo",function(){a.blur()});b.preventDefault()})});$(".navbar-collapse ul li a").click(function(){$(".navbar-toggle:visible").click()});
+$(function(){if($.fn.carousel&&$.fn.carousel.Constructor){$.fn.carousel.Constructor.TRANSITION_DURATION=2000}$(".photo-slideshow").carousel({interval:6000,pause:false}).carousel("cycle")});
 </script>
 
 
